@@ -1,9 +1,8 @@
-﻿namespace AuthBasic
-{
-    public class Response
-    {
-        public string? Status { get; set; }
+﻿namespace AuthBasic;
 
-        public string? Message { get; set; }
-    }
+public class Response
+{
+    public string? Status { get; set; }
+
+    public string? Message { get; set; }
 }

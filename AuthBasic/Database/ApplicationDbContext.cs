@@ -1,18 +1,17 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using AuthBasic.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AuthBasic.Database
-{
-    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
-    {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-        {
-        }
+namespace AuthBasic.Database;
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-        }
+public class ApplicationDbContext : IdentityDbContext<User>
+{
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+    {
+    }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
     }
 }
